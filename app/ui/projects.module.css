@@ -1,0 +1,9 @@
+.projectsContainer {
+	border: 1px solid brown;
+}
+
+.projectCardImage {
+	border: 2px solid brown;
+	height: 200px;
+	width: 114.25px;
+}

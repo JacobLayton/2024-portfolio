@@ -1,0 +1,30 @@
+.nav {
+	border: 1px solid blue;
+}
+
+.nameAndTitle {
+	border: 1px solid green;
+}
+
+.navLinks {
+	border: 1px solid red;
+}
+
+.navLink {
+	border: 1px solid orange;
+	display: flex;
+}
+
+.navLink svg {
+	height: 20px;
+	width: 20px;
+}
+
+.icons {
+	border: 1px solid purple;
+}
+
+.icons svg {
+	height: 30px;
+	width: 30px;
+}
