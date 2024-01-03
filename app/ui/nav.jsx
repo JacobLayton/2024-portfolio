@@ -17,6 +17,7 @@ export default async function Nav() {
 			<div className={styles.nameAndTitle}>
 				<h1>Jacob Layton</h1>
 				<h2>Full Stack Web Developer</h2>
+				<p>I build applications aimed to solve real world problems</p>
 			</div>
 			<div className={styles.navLinks}>
 				<div className={styles.navLink}>

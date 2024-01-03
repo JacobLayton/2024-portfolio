@@ -1,11 +1,10 @@
-/* .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-} */
+.main {
+	border: 3px solid indigo;
+	display: block;
+	padding: 3rem 1.5rem;
+	min-height: 100vh;
+	margin: 0 auto 0 auto;
+}
 
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
