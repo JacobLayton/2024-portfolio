@@ -1,3 +1,8 @@
 .aboutSection {
 	border: 1px solid gray;
+	padding: 90px 0;
+}
+
+.aboutSection p {
+	margin-top: 30px;
 }

@@ -2,6 +2,11 @@
 	border: 1px solid pink;
 }
 
+.experienceCard {
+	padding-top: 30px;
+}
+
 .experienceTechStack {
 	display: flex;
+	flex-wrap: wrap;
 }
