@@ -9,7 +9,7 @@ const experienceData = [
 		dates: '2020 - PRESENT',
 		positionOne: 'TEAM LEAD - PLATFORM UPGRADES',
 		positionTwo: 'TEAM LEAD - LEGACY CUSTOM',
-		positionThree: 'SOFTWARE DEVELOPER - CUSTOMER SUCCESS',
+		positionThree: 'SOFTWARE DEVELOPER',
 		jobDescription:
 			'Lead a team of 4 developers and 2 business analysts focused on upgrading existing clients to the newest version of our product. This involves rewriting or removing custom features where possible, data migrations, and compaitibilty troubleshooting.',
 		techStack: ['Javascript', 'Backbone', 'Node', 'PostgreSQL', 'Docker', 'Yellowfin'],
@@ -25,7 +25,7 @@ const experienceData = [
 
 export default function Experience() {
 	return (
-		<div className={styles.experienceSection}>
+		<div className={styles.experienceContainer}>
 			<h3>Experience</h3>
 			{experienceData.map((job, index) => {
 				return <ExperienceCards key={index} experience={job} />;

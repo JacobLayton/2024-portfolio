@@ -2,8 +2,26 @@
 	border: 1px solid brown;
 }
 
+.projectCard {
+	padding-top: 50px;
+}
+
+.projectCard h4 {
+	margin-bottom: 10px;
+}
+
+.projectCard p {
+	margin-bottom: 10px;
+}
+
 .projectCardImage {
 	border: 2px solid brown;
 	height: 200px;
 	width: 114.25px;
+}
+
+.projectTechStack {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 10px;
 }

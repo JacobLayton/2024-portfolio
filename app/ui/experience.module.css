@@ -1,9 +1,18 @@
-.experienceSection {
+.experienceContainer {
 	border: 1px solid pink;
+	padding-bottom: 90px;
 }
 
 .experienceCard {
 	padding-top: 30px;
+}
+
+.experienceDates {
+	margin-bottom: 10px;
+}
+
+.experienceCard p {
+	padding: 10px 0;
 }
 
 .experienceTechStack {

@@ -10,7 +10,7 @@ export default function ProjectCards(props) {
 	return (
 		<div className={styles.projectCard}>
 			<h4>{props.project.title}</h4>
-			<h4>{props.project.description}</h4>
+			<p>{props.project.description}</p>
 			<div className='projectCardImage'>
 				<Image
 					src={props.project.image}

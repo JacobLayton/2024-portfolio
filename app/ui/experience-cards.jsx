@@ -8,7 +8,7 @@ export default function ExperienceCards(props) {
 	const { techStack } = props.experience;
 	return (
 		<div className={styles.experienceCard}>
-			<h4>{props.experience.dates}</h4>
+			<h4 className={styles.experienceDates}>{props.experience.dates}</h4>
 			<h4>{props.experience.positionOne}</h4>
 			<h4>{props.experience.positionTwo}</h4>
 			<h4>{props.experience.positionThree}</h4>
