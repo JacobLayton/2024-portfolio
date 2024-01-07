@@ -37,6 +37,13 @@
 	--card-rgb: 180, 185, 188;
 	--card-border-rgb: 131, 134, 135;
 } */
+:root {
+	--background-color: #0f172a;
+	--font-primary-color: #e2e8f0;
+	--font-secondary-color: #64748b;
+	--color-pop-primary: rgb(94 234 212);
+	--color-pop-secondary: rgba(45, 212, 191, 0.1);
+}
 
 * {
 	box-sizing: border-box;
@@ -44,9 +51,54 @@
 	margin: 0;
 }
 
+/* FONT COLORS*/
+h1,
+h2,
+h3,
+h4 {
+	color: var(--font-primary-color);
+}
+
+p,
+label {
+	color: var(--font-secondary-color);
+}
+
+/*FONT SIZES*/
+
+h1 {
+	font-weight: 700;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+h3 {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+span {
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+
 html,
 body {
 	max-width: 100vw;
+	background-color: var(--background-color);
 	/* overflow-x: hidden; */
 }
 

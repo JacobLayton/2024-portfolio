@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/app/ui/nav.module.css';
+import styles from '@/app/styles/nav.module.css';
 
 // const links = [
 // 	{ name: 'About', href: '/dashboard', icon: HomeIcon },
@@ -17,7 +17,7 @@ export default async function Nav() {
 			<div className={styles.nameAndTitle}>
 				<h1>Jacob Layton</h1>
 				<h2>Full Stack Web Developer</h2>
-				<p>I build applications aimed to solve real world problems</p>
+				<p>I build applications aimed at solving real world problems.</p>
 			</div>
 			<div className={styles.navLinks}>
 				<div className={styles.navLink}>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/app/ui/about.module.css';
+import styles from '@/app/styles/about.module.css';
 
 export default async function About() {
 	return (

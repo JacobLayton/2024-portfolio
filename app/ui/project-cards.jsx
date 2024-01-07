@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Badge from '@/app/ui/badge';
-import styles from '@/app/ui/projects.module.css';
+import styles from '@/app/styles/projects.module.css';
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;

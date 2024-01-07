@@ -1,0 +1,42 @@
+.experienceContainer {
+	/* border: 1px solid pink; */
+	padding-bottom: 90px;
+}
+
+.experienceCard {
+	padding-top: 30px;
+}
+
+.experienceDates {
+	margin-bottom: 10px;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	color: var(--font-secondary-color);
+}
+
+.position {
+	font-size: 1rem;
+	line-height: 1.25;
+	font-weight: 500;
+}
+
+.previousPosition {
+	margin-top: 0.25rem;
+	color: var(--font-secondary-color);
+	font-size: 1rem;
+	line-height: 1.25;
+	font-weight: 500;
+}
+
+.experienceCard p {
+	padding: 10px 0;
+	font-size: 0.875rem;
+}
+
+.experienceTechStack {
+	display: flex;
+	flex-wrap: wrap;
+}

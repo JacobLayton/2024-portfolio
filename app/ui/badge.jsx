@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import styles from '@/app/ui/badge.module.css';
+import styles from '@/app/styles/badge.module.css';
 
 export default function Badge(props) {
 	return (

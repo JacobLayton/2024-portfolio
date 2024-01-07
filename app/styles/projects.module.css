@@ -1,5 +1,5 @@
 .projectsContainer {
-	border: 1px solid brown;
+	/* border: 1px solid brown; */
 }
 
 .projectCard {
@@ -8,10 +8,14 @@
 
 .projectCard h4 {
 	margin-bottom: 10px;
+	font-size: 1rem;
+	line-height: 1.25;
+	font-weight: 500;
 }
 
 .projectCard p {
 	margin-bottom: 10px;
+	font-size: 0.875rem;
 }
 
 .projectCardImage {

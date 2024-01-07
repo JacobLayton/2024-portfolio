@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import ProjectCards from '@/app/ui/project-cards';
-import styles from '@/app/ui/projects.module.css';
+import styles from '@/app/styles/projects.module.css';
 
 const projectData = [
 	{

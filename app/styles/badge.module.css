@@ -1,0 +1,13 @@
+.badgeContainer {
+	background-color: var(--color-pop-secondary);
+	padding: 0.25rem 0.75rem;
+	border-radius: 999px;
+	align-items: center;
+	margin: 0 10px 10px 0;
+}
+
+.badgeContainer span {
+	color: var(--color-pop-primary);
+	line-height: 1.25rem;
+	letter-spacing: 1px;
+}

@@ -1,5 +1,5 @@
 .nav {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -8,26 +8,26 @@
 }
 
 .nameAndTitle {
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	height: 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.nameAndTitle h1 {
+/* .nameAndTitle h1 {
 	font-size: 35px;
-}
+} */
 
-.nameAndTitle h2 {
+/* .nameAndTitle h2 {
 	font-size: 20px;
-}
+} */
 
 .navLinks {
 	display: none;
 }
 
-.navLink {
+/* .navLink {
 	border: 1px solid orange;
 	display: flex;
 }
@@ -35,13 +35,22 @@
 .navLink svg {
 	height: 20px;
 	width: 20px;
-}
+} */
 
 .icons {
-	border: 1px solid purple;
+	/* border: 1px solid purple; */
+}
+
+.icons a {
+	margin-right: 10px;
 }
 
 .icons svg {
-	height: 30px;
-	width: 30px;
+	fill: var(--font-secondary-color);
+	height: 35px;
+	width: 35px;
+}
+
+.icons svg:hover {
+	fill: var(--font-primary-color);
 }
