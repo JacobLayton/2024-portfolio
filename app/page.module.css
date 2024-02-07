@@ -6,6 +6,12 @@
 	margin: 0 auto 0 auto;
 }
 
+/* @media (min-width: 640px) {
+	.main {
+		border: 2px solid red;
+	}
+} */
+
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
   .card:hover {

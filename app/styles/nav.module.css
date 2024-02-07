@@ -15,9 +15,9 @@
 	justify-content: space-between;
 }
 
-/* .nameAndTitle h1 {
-	font-size: 35px;
-} */
+.nameAndTitle p {
+	max-width: 18rem;
+}
 
 /* .nameAndTitle h2 {
 	font-size: 20px;
@@ -46,7 +46,7 @@
 }
 
 .icons svg {
-	fill: var(--font-secondary-color);
+	fill: var(--color-pop-tertiary);
 	height: 35px;
 	width: 35px;
 }
