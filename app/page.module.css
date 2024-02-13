@@ -6,11 +6,21 @@
 	margin: 0 auto 0 auto;
 }
 
-/* @media (min-width: 640px) {
+@media (min-width: 768px) {
 	.main {
-		border: 2px solid red;
+		padding: 5rem 3rem;
 	}
-} */
+}
+
+@media (min-width: 1024px) {
+	.main {
+		border: 1px solid indigo;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0 6rem;
+	}
+}
 
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
