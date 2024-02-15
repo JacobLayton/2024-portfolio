@@ -59,3 +59,18 @@
 		min-width: 24.25vw;
 	}
 }
+
+@media (min-width: 1024px) {
+	.titleScroll {
+		display: none;
+	}
+	.experienceDates {
+		/* border: 1px solid green; */
+	}
+	.tabletUpLeft {
+		min-width: 25%;
+	}
+	.tabletUpRight {
+		/* border: 1px solid yellow; */
+	}
+}
