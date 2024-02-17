@@ -84,3 +84,12 @@
 	border: 1px solid var(--color-pop-primary);
 	color: var(--background-color);
 }
+
+@media (min-width: 1024px) {
+	.formContainer {
+		padding-bottom: 6rem;
+	}
+	.formContainer h3 {
+		display: none;
+	}
+}
