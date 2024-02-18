@@ -9,23 +9,44 @@ export default function ProjectCards(props) {
 	const { techStack } = props.project;
 	return (
 		<div className={styles.projectCard}>
-			<h4>{props.project.title}</h4>
-			<p>{props.project.description}</p>
-			<div className='projectCardImage'>
-				<Image
-					src={props.project.image}
-					// className='projectCardImage'
-					width={200}
-					height={114.25}
-					quality={100}
-					alt={props.project.altText}
-					style={{ width: '200px', height: 'auto' }}
-				/>
+			<div className={styles.tabletUpLeft}>
+				<div className='projectCardImage'>
+					<Image
+						src={props.project.image}
+						width={200}
+						height={114.25}
+						quality={100}
+						alt={props.project.altText}
+						style={{
+							width: '85%',
+							height: 'auto',
+							borderRadius: '0.25rem',
+						}}
+					/>
+				</div>
 			</div>
-			<div className={styles.projectTechStack}>
-				{techStack.map((item, index) => {
-					return <Badge key={index} techItem={item} />;
-				})}
+			<div className={styles.tabletUpRight}>
+				<h4>{props.project.title}</h4>
+				<p>{props.project.description}</p>
+				<div className={styles.projectCardImageMobile}>
+					<Image
+						src={props.project.image}
+						width={200}
+						height={114.25}
+						quality={100}
+						alt={props.project.altText}
+						style={{
+							width: '200px',
+							height: 'auto',
+							borderRadius: '0.25rem',
+						}}
+					/>
+				</div>
+				<div className={styles.projectTechStack}>
+					{techStack.map((item, index) => {
+						return <Badge key={index} techItem={item} />;
+					})}
+				</div>
 			</div>
 		</div>
 	);

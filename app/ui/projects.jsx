@@ -26,7 +26,9 @@ const projectData = [
 export default function Projects() {
 	return (
 		<div className={styles.projectsContainer}>
-			<h3>Projects</h3>
+			<div className={styles.titleScroll}>
+				<h3>Projects</h3>
+			</div>
 			{projectData.map((project, index) => {
 				return <ProjectCards key={index} project={project} />;
 			})}
