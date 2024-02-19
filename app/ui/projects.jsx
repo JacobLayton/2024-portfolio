@@ -25,7 +25,7 @@ const projectData = [
 
 export default function Projects() {
 	return (
-		<div className={styles.projectsContainer}>
+		<div className={styles.projectsContainer} id='projects'>
 			<div className={styles.titleScroll}>
 				<h3>Projects</h3>
 			</div>

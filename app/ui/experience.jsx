@@ -24,7 +24,7 @@ const experienceData = [
 
 export default function Experience() {
 	return (
-		<div className={styles.experienceContainer}>
+		<div className={styles.experienceContainer} id='experience'>
 			<div className={styles.titleScroll}>
 				<h3>Experience</h3>
 			</div>

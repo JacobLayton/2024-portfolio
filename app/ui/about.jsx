@@ -3,7 +3,7 @@ import styles from '@/app/styles/about.module.css';
 
 export default async function About() {
 	return (
-		<div className={styles.aboutSection}>
+		<div className={styles.aboutSection} id='about'>
 			<div className={styles.titleScroll}>
 				<h3>About</h3>
 			</div>

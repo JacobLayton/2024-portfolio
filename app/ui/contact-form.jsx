@@ -2,7 +2,7 @@ import styles from '@/app/styles/contact-form.module.css';
 
 export default function ContactForm() {
 	return (
-		<form className={styles.formContainer}>
+		<form className={styles.formContainer} id='contact'>
 			<h3>Get in touch</h3>
 			<div className={styles.fieldContainer}>
 				<div className={styles.field}>
