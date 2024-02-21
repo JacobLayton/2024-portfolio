@@ -14,11 +14,11 @@
 
 @media (min-width: 1024px) {
 	.main {
-		border: 1px solid indigo;
 		display: flex;
 		justify-content: space-between;
 		gap: 1rem;
 		padding: 0 6rem;
+		max-width: 1280px;
 	}
 }
 

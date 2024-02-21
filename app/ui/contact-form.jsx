@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '@/app/styles/contact-form.module.css';
 
 export default function ContactForm() {
@@ -10,10 +12,8 @@ export default function ContactForm() {
 					<input id='frm-email' type='email' name='email' autoComplete='email' required />
 				</div>
 				<div className={`${styles.field} ${styles.name}`}>
-					<div>
-						<label htmlFor='frm-name'>Name</label>
-						<input id='frm-name' type='text' name='name' autoComplete='name' required />
-					</div>
+					<label htmlFor='frm-name'>Name</label>
+					<input id='frm-name' type='text' name='name' autoComplete='name' required />
 				</div>
 				<div className={styles.field}>
 					<label htmlFor='frm-message'>Message</label>

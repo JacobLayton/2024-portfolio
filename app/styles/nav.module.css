@@ -7,9 +7,12 @@
 	height: 210px;
 }
 
-.nameAndTitle {
-	/* border: 1px solid green; */
+.infoAndLinks {
 	height: 70%;
+}
+
+.nameAndTitle {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -45,6 +48,8 @@
 	fill: var(--color-pop-tertiary);
 	height: 35px;
 	width: 35px;
+	-webkit-transition: var(--transition-params);
+	transition: var(--transition-params);
 }
 
 .icons svg:hover {
@@ -64,20 +69,22 @@
 
 @media (min-width: 1024px) {
 	.nav {
-		border: 1px solid blue;
 		padding: 6rem 0;
 		position: sticky;
 		top: 0;
 		z-index: 100;
 		width: 40vw;
+		max-width: 640px;
 		height: 100vh;
 	}
-	.nameAndTitle {
-		border: 1px solid green;
-		height: 160px;
-		/* display: flex;
+	.infoAndLinks {
+		display: flex;
 		flex-direction: column;
-		justify-content: space-between; */
+		justify-content: space-between;
+		height: 360px;
+	}
+	.nameAndTitle {
+		height: 150px;
 	}
 	.nameAndTitle h1 {
 		font-size: 3rem;
@@ -88,9 +95,53 @@
 		line-height: 1;
 	}
 	.navLinks {
-		border: 1px solid yellow;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		height: 130px;
+	}
+	.navLinks * {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-transition: var(--transition-params);
+		transition: var(--transition-params);
+	}
+	.navLinks a {
+		text-decoration: none;
+	}
+	.navLinks h3 {
+		font-size: 0.75rem;
+		color: var(--font-secondary-color);
+	}
+	.navLinks h3:hover {
+		color: var(--font-primary-color);
+	}
+	/* .navLinks h3:before {
+		left: -10%;
+		right: -10%;
+		content: '';
+		border-left: 12px solid #9b59b6;
+		border-right: 12px solid #9b59b6;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		height: 3px;
+		opacity: 1;
+		position: absolute;
+		-webkit-transition: all 0.35s ease;
+		transition: all 0.35s ease;
+	} */
+	/* .navLinks h3:hover,
+	.navLinks .activeLink h3 {
+		color: var(--font-primary-color);
+	}
+	.navLinks h3:hover:before,
+	.navLinks .activeLink h3:before {
+		left: 0;
+		right: 0;
+		opacity: 1;
+	} */
+	.navLinks .activeLink h3 {
+		color: var(--font-primary-color);
 	}
 	.navLink {
 		display: flex;
@@ -101,6 +152,5 @@
 		color: var(--font-primary-color);
 	}
 	.icons {
-		border: 1px solid purple;
 	}
 }
