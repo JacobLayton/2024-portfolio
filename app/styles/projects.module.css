@@ -18,6 +18,7 @@
 	color: inherit;
 	display: flex;
 	border: 1px solid blue;
+	cursor: pointer;
 }
 
 .tabletUpLeft {
@@ -38,6 +39,24 @@
 .projectCard:hover .projectCardTitle svg {
 	color: var(--color-pop-primary);
 	fill: var(--color-pop-primary);
+}
+
+@keyframes bounceUpRight {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(2px, -3px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.projectCard:hover .projectCardTitle svg {
+	color: var(--color-pop-primary);
+	fill: var(--color-pop-primary);
+	animation: bounceUpRight 0.75s ease-in-out infinite;
 }
 
 .projectCardTitle svg {
