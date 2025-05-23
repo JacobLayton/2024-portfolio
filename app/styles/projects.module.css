@@ -20,6 +20,11 @@
 	display: none;
 }
 
+.projectCardTitle {
+	/* border: 1px solid red; */
+	display: flex;
+}
+
 .projectCard h4 {
 	margin-bottom: 10px;
 	font-size: 1rem;
