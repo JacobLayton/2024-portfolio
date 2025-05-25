@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Badge from '@/app/ui/badge';
+import { LaunchSVG } from '../../public/SVGIcons';
 import styles from '@/app/styles/experience.module.css';
 
 export default function ExperienceCards(props) {
@@ -12,7 +13,10 @@ export default function ExperienceCards(props) {
 				<h4 className={styles.experienceDates}>{props.experience.dates}</h4>
 			</div>
 			<div className={styles.tabletUpRight}>
-				<h4 className={styles.position}>{props.experience.positionOne}</h4>
+				<div className={styles.experienceCardTitle}>
+					<h4 className={styles.position}>{props.experience.positionOne}</h4>
+					{LaunchSVG}
+				</div>
 				{props.experience.positionTwo ? (
 					<h4 className={styles.previousPosition}>{props.experience.positionTwo}</h4>
 				) : null}
