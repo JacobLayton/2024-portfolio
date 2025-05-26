@@ -7,8 +7,15 @@ import styles from '@/app/styles/experience.module.css';
 
 export default function ExperienceCards(props) {
 	const { techStack } = props.experience;
+	const url = props.experience.url;
 	return (
-		<div className={styles.experienceCard}>
+		<a
+			href={url}
+			target='_blank'
+			rel='noopener noreferrer'
+			className={styles.experienceCard}
+			style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+		>
 			<div className={styles.tabletUpLeft}>
 				<h4 className={styles.experienceDates}>{props.experience.dates}</h4>
 			</div>
@@ -30,6 +37,6 @@ export default function ExperienceCards(props) {
 					})}
 				</div>
 			</div>
-		</div>
+		</a>
 	);
 }
