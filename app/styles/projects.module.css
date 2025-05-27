@@ -13,7 +13,8 @@
 }
 
 .projectCard {
-	padding-top: 50px;
+	padding: 15px;
+	border: 1px solid blue;
 }
 
 .tabletUpLeft {
@@ -23,6 +24,11 @@
 .projectCardTitle {
 	/* border: 1px solid red; */
 	display: flex;
+}
+
+.projectCardTitle svg {
+	fill: var(--font-primary-color);
+	margin-left: 6px;
 }
 
 .projectCard h4 {

@@ -14,7 +14,8 @@
 }
 
 .experienceCard {
-	padding-top: 30px;
+	padding: 15px;
+	border: 1px solid red;
 }
 
 .experienceDates {
@@ -43,6 +44,11 @@
 
 .experienceCardTitle {
 	display: flex;
+}
+
+.experienceCardTitle svg {
+	fill: var(--font-primary-color);
+	margin-left: 6px;
 }
 
 .experienceCard p {
