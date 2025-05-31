@@ -14,6 +14,9 @@
 
 .projectCard {
 	padding: 15px;
+	text-decoration: none;
+	color: inherit;
+	display: flex;
 	border: 1px solid blue;
 }
 
@@ -26,9 +29,20 @@
 	display: flex;
 }
 
+.projectCardTitle h4,
+.projectCardTitle svg {
+	transition: var(--transition-params);
+}
+
+.projectCard:hover .projectCardTitle h4,
+.projectCard:hover .projectCardTitle svg {
+	color: var(--color-pop-primary);
+	fill: var(--color-pop-primary);
+}
+
 .projectCardTitle svg {
 	fill: var(--font-primary-color);
-	margin-left: 6px;
+	margin-left: 4px;
 }
 
 .projectCard h4 {

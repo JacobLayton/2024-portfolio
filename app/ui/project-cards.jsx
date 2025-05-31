@@ -8,8 +8,9 @@ import styles from '@/app/styles/projects.module.css';
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;
+	const url = props.project.url;
 	return (
-		<div className={styles.projectCard}>
+		<a href={url} target='_blank' rel='noopener noreferrer' className={styles.projectCard}>
 			<div className={styles.tabletUpLeft}>
 				<div className='projectCardImage'>
 					<Image
@@ -52,6 +53,6 @@ export default function ProjectCards(props) {
 					})}
 				</div>
 			</div>
-		</div>
+		</a>
 	);
 }
