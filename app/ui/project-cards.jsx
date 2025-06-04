@@ -16,7 +16,10 @@ export default function ProjectCards(props) {
 		if (url) {
 			window.open(url, '_blank', 'noopener,noreferrer');
 		} else {
-			toast('there is nothing here');
+			toast.warn('This tool is only accessible to BloomTech faculty and students.', {
+				backgroundColor: 'var(--color-pop-solid)',
+				color: 'var(--background-color)',
+			});
 		}
 	}
 

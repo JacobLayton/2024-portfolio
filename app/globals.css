@@ -74,6 +74,7 @@
 	--color-pop-primary: #ee964b;
 	--color-pop-secondary: rgba(238, 150, 75, 0.2);
 	--color-pop-tertiary: rgba(238, 150, 75, 0.6);
+	--color-pop-solid: rgba(238, 150, 75, 1);
 	--transition-params: all 0.35s ease;
 }
 
