@@ -82,6 +82,11 @@
 	padding-top: 10px;
 }
 
+.dead-link-toast {
+	background: var(--color-pop-solid);
+	color: var(--background-color);
+}
+
 @media (min-width: 640px) {
 	.projectCard {
 		display: flex;

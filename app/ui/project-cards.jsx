@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Badge from '@/app/ui/badge';
 import { LaunchSVG } from '../../public/SVGIcons';
 import styles from '@/app/styles/projects.module.css';
-import { toast } from 'react-toast';
+import { toast } from 'react-toastify';
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;
@@ -17,6 +17,7 @@ export default function ProjectCards(props) {
 			window.open(url, '_blank', 'noopener,noreferrer');
 		} else {
 			toast.warn('This tool is only accessible to BloomTech faculty and students.', {
+				className: styles.deadLinkToast,
 				backgroundColor: 'var(--color-pop-solid)',
 				color: 'var(--background-color)',
 			});
