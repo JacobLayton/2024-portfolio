@@ -11,7 +11,7 @@ import styles from './page.module.css';
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			<ToastContainer position={'bottom-right'} delay={4000} />
+			<ToastContainer />
 			<div className={styles.topOrLeft}>
 				<Nav />
 			</div>

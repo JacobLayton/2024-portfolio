@@ -5,7 +5,13 @@ import Image from 'next/image';
 import Badge from '@/app/ui/badge';
 import { LaunchSVG } from '../../public/SVGIcons';
 import styles from '@/app/styles/projects.module.css';
-import { toast } from 'react-toastify';
+import { toast, cssTransition } from 'react-toastify';
+
+const slideTransition = cssTransition({
+	enter: 'toast-slide-in',
+	exit: 'toast-slide-out',
+	duration: [300, 300], // [enter, exit] in ms
+});
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;
@@ -16,10 +22,17 @@ export default function ProjectCards(props) {
 		if (url) {
 			window.open(url, '_blank', 'noopener,noreferrer');
 		} else {
-			toast.warn('This tool is only accessible to BloomTech faculty and students.', {
+			toast.info('This tool is only accessible to BloomTech faculty and students.', {
+				toastId: 'deadLink',
+				position: 'bottom-right',
+				autoClose: 3000,
+				hideProgressBar: true,
+				transition: slideTransition,
+				style: {
+					background: 'var(--color-pop-solid)',
+					color: 'var(--background-color)',
+				},
 				className: styles.deadLinkToast,
-				backgroundColor: 'var(--color-pop-solid)',
-				color: 'var(--background-color)',
 			});
 		}
 	}
