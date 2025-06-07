@@ -148,3 +148,43 @@ body {
 		color-scheme: dark;
 	}
 } */
+
+/* Toast customization */
+.Toastify__close-button {
+	color: var(--background-color) !important;
+}
+
+.Toastify__toast-icon svg {
+	fill: var(--background-color) !important;
+}
+
+/* Toast animations */
+.toast-slide-in {
+  animation: toastSlideIn 0.3s ease forwards;
+}
+
+.toast-slide-out {
+  animation: toastSlideOut 0.3s ease forwards !important;
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
