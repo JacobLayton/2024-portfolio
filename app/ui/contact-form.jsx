@@ -1,23 +1,91 @@
 'use client';
 
+import { useState } from 'react';
 import styles from '@/app/styles/contact-form.module.css';
+import { toast, cssTransition } from 'react-toastify';
+
+const slideTransition = cssTransition({
+	enter: 'toast-slide-in',
+	exit: 'toast-slide-out',
+	duration: [300, 300],
+});
 
 export default function ContactForm() {
+	const [formData, setFormData] = useState({
+		email: '',
+		name: '',
+		message: '',
+	});
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({
+			...prev,
+			[name]: value,
+		}));
+	};
+
+	function handleSubmitClick(e) {
+		e.preventDefault();
+		toast.success('Thank you! Your message has been sent.', {
+			toastId: 'success',
+			position: 'bottom-right',
+			autoClose: 3000,
+			hideProgressBar: true,
+			transition: slideTransition,
+			style: {
+				background: 'var(--color-pop-solid)',
+				color: 'var(--background-color)',
+				borderRadius: '15px',
+			},
+			className: styles.successLinkToast,
+		});
+		// Reset form
+		setFormData({
+			email: '',
+			name: '',
+			message: '',
+		});
+	}
+
 	return (
-		<form className={styles.formContainer} id='contact'>
+		<form className={styles.formContainer} id='contact' onSubmit={handleSubmitClick}>
 			<h3>Get in touch</h3>
 			<div className={styles.fieldContainer}>
 				<div className={styles.field}>
 					<label htmlFor='frm-email'>Email</label>
-					<input id='frm-email' type='email' name='email' autoComplete='email' required />
+					<input
+						id='frm-email'
+						type='email'
+						name='email'
+						value={formData.email}
+						onChange={handleChange}
+						autoComplete='email'
+						required
+					/>
 				</div>
 				<div className={`${styles.field} ${styles.name}`}>
 					<label htmlFor='frm-name'>Name</label>
-					<input id='frm-name' type='text' name='name' autoComplete='name' required />
+					<input
+						id='frm-name'
+						type='text'
+						name='name'
+						value={formData.name}
+						onChange={handleChange}
+						autoComplete='name'
+						required
+					/>
 				</div>
 				<div className={styles.field}>
 					<label htmlFor='frm-message'>Message</label>
-					<textarea id='frm-message' rows='6' name='message'></textarea>
+					<textarea
+						id='frm-message'
+						rows='6'
+						name='message'
+						value={formData.message}
+						onChange={handleChange}
+						required
+					></textarea>
 				</div>
 				<div className={`${styles.field} ${styles.submitButton}`}>
 					<button type='submit'>SEND</button>

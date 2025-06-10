@@ -32,6 +32,7 @@ export default function ProjectCards(props) {
 					background: 'var(--color-pop-solid)',
 					color: 'var(--background-color)',
 					borderRadius: '15px',
+					fontFamily: 'var(--font-mulish)',
 				},
 				className: styles.deadLinkToast,
 			});
