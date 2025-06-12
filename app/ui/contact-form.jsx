@@ -27,6 +27,35 @@ export default function ContactForm() {
 
 	function handleSubmitClick(e) {
 		e.preventDefault();
+
+		// Check for missing required fields
+		const missingFields = Object.entries(formData)
+			.filter(([_, value]) => !value)
+			.map(([field]) => field.charAt(0).toUpperCase() + field.slice(1))
+			.join(', ');
+
+		if (missingFields) {
+			toast.error(
+				`To submit the form, please fill out the following field${
+					missingFields?.length > 7 ? 's' : ''
+				}: ${missingFields}`,
+				{
+					toastId: 'error',
+					position: 'bottom-right',
+					autoClose: 3000,
+					hideProgressBar: true,
+					transition: slideTransition,
+					style: {
+						background: 'var(--color-pop-solid)',
+						color: 'var(--background-color)',
+						borderRadius: '15px',
+					},
+					className: styles.errorLinkToast,
+				}
+			);
+			return;
+		}
+
 		toast.success('Thank you! Your message has been sent.', {
 			toastId: 'success',
 			position: 'bottom-right',
@@ -40,6 +69,7 @@ export default function ContactForm() {
 			},
 			className: styles.successLinkToast,
 		});
+
 		// Reset form
 		setFormData({
 			email: '',
@@ -49,7 +79,7 @@ export default function ContactForm() {
 	}
 
 	return (
-		<form className={styles.formContainer} id='contact' onSubmit={handleSubmitClick}>
+		<form className={styles.formContainer} id='contact' onSubmit={handleSubmitClick} noValidate>
 			<h3>Get in touch</h3>
 			<div className={styles.fieldContainer}>
 				<div className={styles.field}>
@@ -61,7 +91,6 @@ export default function ContactForm() {
 						value={formData.email}
 						onChange={handleChange}
 						autoComplete='email'
-						required
 					/>
 				</div>
 				<div className={`${styles.field} ${styles.name}`}>
@@ -73,7 +102,6 @@ export default function ContactForm() {
 						value={formData.name}
 						onChange={handleChange}
 						autoComplete='name'
-						required
 					/>
 				</div>
 				<div className={styles.field}>
@@ -84,7 +112,6 @@ export default function ContactForm() {
 						name='message'
 						value={formData.message}
 						onChange={handleChange}
-						required
 					></textarea>
 				</div>
 				<div className={`${styles.field} ${styles.submitButton}`}>
