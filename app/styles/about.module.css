@@ -16,3 +16,18 @@
 .aboutSection p {
 	margin-top: 30px;
 }
+
+@media (min-width: 1024px) {
+	.aboutSection {
+		/* border: 1px solid gray; */
+		padding-top: 6rem;
+		padding-bottom: 90px;
+	}
+	.titleScroll {
+		display: none;
+	}
+	.aboutSection p {
+		margin-top: 2px;
+		margin-bottom: 28px;
+	}
+}

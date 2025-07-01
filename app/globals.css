@@ -74,6 +74,7 @@
 	--color-pop-primary: #ee964b;
 	--color-pop-secondary: rgba(238, 150, 75, 0.2);
 	--color-pop-tertiary: rgba(238, 150, 75, 0.6);
+	--transition-params: all 0.35s ease;
 }
 
 * {
@@ -131,6 +132,7 @@ body {
 	min-width: 280px;
 	max-width: 100vw;
 	background-color: var(--background-color);
+	scroll-behavior: smooth;
 	/* overflow-x: hidden; */
 }
 
