@@ -1,9 +1,23 @@
-.projectsContainer {
-	/* border: 1px solid brown; */
+/* .projectsContainer {
+	border: 1px solid brown;
+} */
+
+.titleScroll {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	backdrop-filter: blur(5px);
+	background-color: var(--background-color-blur);
 }
 
 .projectCard {
 	padding-top: 50px;
+}
+
+.tabletUpLeft {
+	display: none;
 }
 
 .projectCard h4 {
@@ -18,14 +32,33 @@
 	font-size: 0.875rem;
 }
 
-.projectCardImage {
-	border: 2px solid brown;
-	height: 200px;
-	width: 114.25px;
-}
-
 .projectTechStack {
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 10px;
+}
+
+@media (min-width: 640px) {
+	.projectCard {
+		display: flex;
+	}
+	.tabletUpLeft {
+		display: block;
+		min-width: 24.25vw;
+		padding-top: 4px;
+	}
+	.projectCardImageMobile {
+		display: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.titleScroll {
+		display: none;
+	}
+	.tabletUpLeft {
+		display: block;
+		min-width: 25%;
+		padding-top: 4px;
+	}
 }

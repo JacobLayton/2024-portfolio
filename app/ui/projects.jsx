@@ -6,6 +6,24 @@ import styles from '@/app/styles/projects.module.css';
 
 const projectData = [
 	{
+		title: 'Giraft.io',
+		description:
+			'Giraft is a Web3 sports betting platform that allows users to wager crypto on a wide range of markets using any chain they prefer. As a founding developer on this project I take great pride in the intuitive UI and the reliability of the application.',
+		image: '/giraft-logo.png',
+		altText: 'Giraft sports logo',
+		techStack: [
+			'Typescript',
+			'Next.js',
+			'Web3',
+			'GraphQL',
+			'Privy',
+			'Azuro',
+			'Tailwind',
+			'Shadcn',
+		],
+		launchUrl: 'https://giraft.io/',
+	},
+	{
 		title: 'Bookmaps',
 		description:
 			'BookMaps is a free P2P book-sharing web app which enables users to safely lend and borrow books with people near them. It serves as a great way for people who may not have access to a library or bookstore to explore new books and expand their knowledge.',
@@ -25,8 +43,10 @@ const projectData = [
 
 export default function Projects() {
 	return (
-		<div className={styles.projectsContainer}>
-			<h3>Projects</h3>
+		<div className={styles.projectsContainer} id='projects'>
+			<div className={styles.titleScroll}>
+				<h3>Projects</h3>
+			</div>
 			{projectData.map((project, index) => {
 				return <ProjectCards key={index} project={project} />;
 			})}

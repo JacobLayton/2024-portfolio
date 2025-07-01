@@ -6,6 +6,22 @@
 	margin: 0 auto 0 auto;
 }
 
+@media (min-width: 768px) {
+	.main {
+		padding: 5rem 3rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0 6rem;
+		max-width: 1280px;
+	}
+}
+
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
   .card:hover {

@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import styles from '@/app/styles/about.module.css';
 
-export default async function About() {
+export default function About() {
 	return (
-		<div className={styles.aboutSection}>
-			<h3>About</h3>
+		<div className={styles.aboutSection} id='about'>
+			<div className={styles.titleScroll}>
+				<h3>About</h3>
+			</div>
 			<p>
 				Born and raised in Portland, Oregon - I appreciate all that the Pacific Northwest
 				has to offer. Whether it's snowboarding on Mt. Hood or hiking through the Columbia

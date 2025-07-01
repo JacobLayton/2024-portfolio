@@ -14,7 +14,7 @@ const experienceData = [
 		techStack: ['Javascript', 'Backbone', 'Node', 'PostgreSQL', 'Docker', 'Yellowfin'],
 	},
 	{
-		dates: '2019',
+		dates: '2018 - 2019',
 		positionOne: 'Team Lead - BloomTech',
 		jobDescription:
 			'BloomTech is a coding bootcamp at which I supervised 120 students and 14 project managers while they worked through the curriculum. I assisted instructors in teaching and reviewing lessons, as well as lead daily whiteboard solutions with the cohort.',
@@ -24,8 +24,10 @@ const experienceData = [
 
 export default function Experience() {
 	return (
-		<div className={styles.experienceContainer}>
-			<h3>Experience</h3>
+		<div className={styles.experienceContainer} id='experience'>
+			<div className={styles.titleScroll}>
+				<h3>Experience</h3>
+			</div>
 			{experienceData.map((job, index) => {
 				return <ExperienceCards key={index} experience={job} />;
 			})}

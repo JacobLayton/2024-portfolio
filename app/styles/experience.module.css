@@ -3,6 +3,16 @@
 	padding-bottom: 90px;
 }
 
+.titleScroll {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	backdrop-filter: blur(5px);
+	background-color: var(--background-color-blur);
+}
+
 .experienceCard {
 	padding-top: 30px;
 }
@@ -39,4 +49,28 @@
 .experienceTechStack {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+	.experienceCard {
+		display: flex;
+	}
+	.tabletUpLeft {
+		min-width: 24.25vw;
+	}
+}
+
+@media (min-width: 1024px) {
+	.titleScroll {
+		display: none;
+	}
+	.experienceDates {
+		/* border: 1px solid green; */
+	}
+	.tabletUpLeft {
+		min-width: 25%;
+	}
+	.tabletUpRight {
+		/* border: 1px solid yellow; */
+	}
 }

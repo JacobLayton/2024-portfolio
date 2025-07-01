@@ -37,12 +37,44 @@
 	--card-rgb: 180, 185, 188;
 	--card-border-rgb: 131, 134, 135;
 } */
-:root {
+
+/* ORIGINAL */
+/* :root {
 	--background-color: #0f172a;
 	--font-primary-color: #e2e8f0;
 	--font-secondary-color: #64748b;
 	--color-pop-primary: rgb(94 234 212);
 	--color-pop-secondary: rgba(45, 212, 191, 0.1);
+} */
+
+/*BROWN*/
+/* :root {
+	--background-color: #423727;
+	--font-primary-color: #f1e9dd;
+	--font-secondary-color: #9c8b72;
+	--color-pop-primary: rgb(153, 247, 171);
+	--color-pop-secondary: rgba(171, 223, 117, 0.1);
+} */
+
+/*FOREST GREEN*/
+/* :root {
+	--background-color: #1d3829;
+	--font-primary-color: #e0ebeb;
+	--font-secondary-color: #799685;
+	--color-pop-primary: rgb(238, 150, 75);
+	--color-pop-secondary: rgba(249, 87, 56, 0.1);
+} */
+
+/*DEEP GREEN*/
+:root {
+	--background-color: #102218;
+	--background-color-blur: rgba(16, 34, 24, 0.75);
+	--font-primary-color: #dee0df;
+	--font-secondary-color: #84918c;
+	--color-pop-primary: #ee964b;
+	--color-pop-secondary: rgba(238, 150, 75, 0.2);
+	--color-pop-tertiary: rgba(238, 150, 75, 0.6);
+	--transition-params: all 0.35s ease;
 }
 
 * {
@@ -97,8 +129,10 @@ span {
 
 html,
 body {
+	min-width: 280px;
 	max-width: 100vw;
 	background-color: var(--background-color);
+	scroll-behavior: smooth;
 	/* overflow-x: hidden; */
 }
 
