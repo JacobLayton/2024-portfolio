@@ -14,7 +14,11 @@
 }
 
 .experienceCard {
-	padding-top: 30px;
+	padding: 15px;
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	border: 1px solid red;
 }
 
 .experienceDates {
@@ -39,6 +43,26 @@
 	font-size: 1rem;
 	line-height: 1.25;
 	font-weight: 500;
+}
+
+.experienceCardTitle {
+	display: flex;
+}
+
+.experienceCardTitle h4,
+.experienceCardTitle svg {
+	transition: var(--transition-params);
+}
+
+.experienceCard:hover .experienceCardTitle h4,
+.experienceCard:hover .experienceCardTitle svg {
+	color: var(--color-pop-primary);
+	fill: var(--color-pop-primary);
+}
+
+.experienceCardTitle svg {
+	fill: var(--font-primary-color);
+	margin-left: 4px;
 }
 
 .experienceCard p {

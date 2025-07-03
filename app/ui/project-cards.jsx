@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Badge from '@/app/ui/badge';
+import { LaunchSVG } from '../../public/SVGIcons';
 import styles from '@/app/styles/projects.module.css';
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;
+	const url = props.project.url;
 	return (
-		<div className={styles.projectCard}>
+		<a href={url} target='_blank' rel='noopener noreferrer' className={styles.projectCard}>
 			<div className={styles.tabletUpLeft}>
 				<div className='projectCardImage'>
 					<Image
@@ -26,7 +28,10 @@ export default function ProjectCards(props) {
 				</div>
 			</div>
 			<div className={styles.tabletUpRight}>
-				<h4>{props.project.title}</h4>
+				<div className={styles.projectCardTitle}>
+					<h4>{props.project.title}</h4>
+					{LaunchSVG}
+				</div>
 				<p>{props.project.description}</p>
 				<div className={styles.projectCardImageMobile}>
 					<Image
@@ -48,6 +53,6 @@ export default function ProjectCards(props) {
 					})}
 				</div>
 			</div>
-		</div>
+		</a>
 	);
 }

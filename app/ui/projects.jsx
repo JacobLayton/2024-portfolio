@@ -21,7 +21,7 @@ const projectData = [
 			'Tailwind',
 			'Shadcn',
 		],
-		launchUrl: 'https://giraft.io/',
+		url: 'https://giraft.io/',
 	},
 	{
 		title: 'Bookmaps',

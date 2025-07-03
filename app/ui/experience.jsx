@@ -12,6 +12,7 @@ const experienceData = [
 		jobDescription:
 			'Lead a team of 4 developers and 2 business analysts focused on upgrading existing clients to the newest version of our product. This involves rewriting or removing custom features where possible, data migrations, and compaitibilty troubleshooting.',
 		techStack: ['Javascript', 'Backbone', 'Node', 'PostgreSQL', 'Docker', 'Yellowfin'],
+		url: 'https://caseiq.com',
 	},
 	{
 		dates: '2018 - 2019',
@@ -19,6 +20,7 @@ const experienceData = [
 		jobDescription:
 			'BloomTech is a coding bootcamp at which I supervised 120 students and 14 project managers while they worked through the curriculum. I assisted instructors in teaching and reviewing lessons, as well as lead daily whiteboard solutions with the cohort.',
 		techStack: ['Javascript', 'React', 'Node'],
+		url: 'https://www.bloomtech.com',
 	},
 ];
 
