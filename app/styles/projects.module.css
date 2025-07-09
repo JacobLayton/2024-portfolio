@@ -17,8 +17,16 @@
 	text-decoration: none;
 	color: inherit;
 	display: flex;
-	border: 1px solid blue;
+	border-radius: 15px;
+	border: 1px solid var(--background-color);
 	cursor: pointer;
+}
+
+.projectCard:hover {
+	background-color: rgba(255, 255, 255, 0.025);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-left: 1px solid rgba(255, 255, 255, 0.03);
+	transition: var(--transition-params);
 }
 
 .tabletUpLeft {
