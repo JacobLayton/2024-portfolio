@@ -14,7 +14,7 @@ export default function About() {
 			</p>
 			<p>
 				I bring the same disposition to the world of coding. I'm passionate about learning
-				new technoglogies, understanding how they work under the hood, and using them
+				new technologies, understanding how they work under the hood, and using them
 				creatively to produce something new and different.
 			</p>
 			<p>
