@@ -13,13 +13,14 @@
 }
 
 .projectCard {
-	padding: 15px;
+	padding: 15px 15px 10px 10px;
 	text-decoration: none;
 	color: inherit;
 	display: flex;
 	border-radius: 15px;
 	border: 1px solid var(--background-color);
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 
 .projectCard:hover {

@@ -14,12 +14,13 @@
 }
 
 .experienceCard {
-	padding: 15px;
+	padding: 15px 15px 10px 15px;
 	text-decoration: none;
 	color: inherit;
 	display: block;
 	border-radius: 15px;
 	border: 1px solid var(--background-color);
+	margin-bottom: 10px;
 }
 
 .experienceCard:hover {
