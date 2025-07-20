@@ -30,6 +30,7 @@ const projectData = [
 		image: '/bookmaps-tablet.jpg',
 		altText: 'Screenshot of dashboard showing tablet version',
 		techStack: ['Javascript', 'React', 'Redux', 'Node', 'Google Maps', 'Goodreads', 'Stripe'],
+		url: 'https://github.com/labs11-library',
 	},
 	{
 		title: 'Curriculum Bot',

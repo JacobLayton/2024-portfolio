@@ -5,12 +5,32 @@ import Image from 'next/image';
 import Badge from '@/app/ui/badge';
 import { LaunchSVG } from '../../public/SVGIcons';
 import styles from '@/app/styles/projects.module.css';
+import { toast } from 'react-toast';
 
 export default function ProjectCards(props) {
 	const { techStack } = props.project;
 	const url = props.project.url;
+
+	function handleCardClick(e) {
+		e.preventDefault();
+		if (url) {
+			window.open(url, '_blank', 'noopener,noreferrer');
+		} else {
+			toast('there is nothing here');
+		}
+	}
+
 	return (
-		<a href={url} target='_blank' rel='noopener noreferrer' className={styles.projectCard}>
+		<div
+			onClick={handleCardClick}
+			className={styles.projectCard}
+			style={{ cursor: 'pointer' }}
+			role='button'
+			tabIndex={0}
+			onKeyPress={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') handleCardClick(e);
+			}}
+		>
 			<div className={styles.tabletUpLeft}>
 				<div className='projectCardImage'>
 					<Image
@@ -53,6 +73,6 @@ export default function ProjectCards(props) {
 					})}
 				</div>
 			</div>
-		</a>
+		</div>
 	);
 }

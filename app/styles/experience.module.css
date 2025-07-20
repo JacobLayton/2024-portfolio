@@ -60,6 +60,27 @@
 	fill: var(--color-pop-primary);
 }
 
+@keyframes bounceUpRight {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(2px, -3px);
+	}
+	/* 60% {
+		transform: translate(2px, -3px);
+	} */
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.experienceCard:hover .experienceCardTitle svg {
+	color: var(--color-pop-primary);
+	fill: var(--color-pop-primary);
+	animation: bounceUpRight 0.75s ease-in-out infinite;
+}
+
 .experienceCardTitle svg {
 	fill: var(--font-primary-color);
 	margin-left: 4px;
