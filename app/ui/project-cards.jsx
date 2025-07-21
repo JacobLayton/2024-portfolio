@@ -10,7 +10,7 @@ import { toast, cssTransition } from 'react-toastify';
 const slideTransition = cssTransition({
 	enter: 'toast-slide-in',
 	exit: 'toast-slide-out',
-	duration: [300, 300], // [enter, exit] in ms
+	duration: [300, 300],
 });
 
 export default function ProjectCards(props) {
@@ -31,6 +31,8 @@ export default function ProjectCards(props) {
 				style: {
 					background: 'var(--color-pop-solid)',
 					color: 'var(--background-color)',
+					borderRadius: '15px',
+					fontFamily: 'var(--font-mulish)',
 				},
 				className: styles.deadLinkToast,
 			});

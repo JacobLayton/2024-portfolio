@@ -76,6 +76,7 @@
 	--color-pop-tertiary: rgba(238, 150, 75, 0.6);
 	--color-pop-solid: rgba(238, 150, 75, 1);
 	--transition-params: all 0.35s ease;
+	--font-mulish: 'Mulish', sans-serif;
 }
 
 * {
@@ -160,31 +161,31 @@ body {
 
 /* Toast animations */
 .toast-slide-in {
-  animation: toastSlideIn 0.3s ease forwards;
+	animation: toastSlideIn 0.3s ease forwards;
 }
 
 .toast-slide-out {
-  animation: toastSlideOut 0.3s ease forwards !important;
+	animation: toastSlideOut 0.3s ease forwards !important;
 }
 
 @keyframes toastSlideIn {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes toastSlideOut {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(100%);
-    opacity: 0;
-  }
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(100%);
+		opacity: 0;
+	}
 }
