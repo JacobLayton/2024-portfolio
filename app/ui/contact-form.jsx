@@ -17,6 +17,7 @@ export default function ContactForm() {
 		name: '',
 		message: '',
 	});
+	const [sendingMessage, setSendingMessage] = useState(false);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -56,6 +57,7 @@ export default function ContactForm() {
 			);
 			return;
 		}
+		setSendingMessage(true);
 
 		const { email, name, message } = formData;
 		const messageData = {
@@ -89,6 +91,7 @@ export default function ContactForm() {
 					name: '',
 					message: '',
 				});
+				setSendingMessage(false);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -111,6 +114,7 @@ export default function ContactForm() {
 					name: '',
 					message: '',
 				});
+				setSendingMessage(false);
 			});
 	}
 
@@ -151,7 +155,9 @@ export default function ContactForm() {
 					></textarea>
 				</div>
 				<div className={`${styles.field} ${styles.submitButton}`}>
-					<button type='submit'>SEND</button>
+					<button type='submit' disabled={sendingMessage}>
+						{sendingMessage ? 'SENDING' : 'SEND'}
+					</button>
 				</div>
 			</div>
 		</form>
