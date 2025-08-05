@@ -1,5 +1,6 @@
 // This file contains SVG markup for use throughout the app.
 // Copy the SVG markup from the nav.jsx file here for LinkedIn, GitHub, and Instagram icons.
+import styles from '@/app/styles/nav.module.css';
 
 export const LinkedInSVG = (
 	<svg
@@ -50,5 +51,24 @@ export const LaunchSVG = (
 		viewBox='0 0 20 20'
 	>
 		<path d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z'></path>
+	</svg>
+);
+
+export const ArrowSVG = (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		width='256'
+		height='256'
+		viewBox='0 0 256 256'
+		className={styles.arrowIcon}
+	>
+		<g transform='translate(1.4065934065934016 1.4065934065934016) scale(1.2 1.2)'>
+			<path
+				d='M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z'
+				stroke='currentColor'
+				strokeWidth='8'
+				fill='none'
+			/>
+		</g>
 	</svg>
 );

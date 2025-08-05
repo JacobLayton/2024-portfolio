@@ -76,6 +76,7 @@
 	border: 1px solid var(--color-pop-primary);
 	color: var(--color-pop-primary);
 	line-height: 1.25rem;
+	transition: var(--transition-params);
 }
 
 .formContainer button:hover {
@@ -83,6 +84,7 @@
 	background-color: var(--color-pop-primary);
 	border: 1px solid var(--color-pop-primary);
 	color: var(--background-color);
+	transition: var(--transition-params);
 }
 
 @media (min-width: 1024px) {

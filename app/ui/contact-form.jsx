@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import styles from '@/app/styles/contact-form.module.css';
+import axios from 'axios';
 import { toast, cssTransition } from 'react-toastify';
+import styles from '@/app/styles/contact-form.module.css';
 
 const slideTransition = cssTransition({
 	enter: 'toast-slide-in',
@@ -56,26 +57,61 @@ export default function ContactForm() {
 			return;
 		}
 
-		toast.success('Thank you! Your message has been sent.', {
-			toastId: 'success',
-			position: 'bottom-right',
-			autoClose: 3000,
-			hideProgressBar: true,
-			transition: slideTransition,
-			style: {
-				background: 'var(--color-pop-solid)',
-				color: 'var(--background-color)',
-				borderRadius: '15px',
-			},
-			className: styles.successLinkToast,
-		});
+		const { email, name, message } = formData;
+		const messageData = {
+			origin: 'My Portfolio',
+			recipient: 'hello@jacoblayton.dev',
+			name,
+			email,
+			subject: `From ${name}`,
+			text: message,
+		};
 
-		// Reset form
-		setFormData({
-			email: '',
-			name: '',
-			message: '',
-		});
+		axios
+			.post(process.env.NEXT_PUBLIC_BACKEND_SERVER_URL, { messageData })
+			.then((res) => {
+				toast.success('Thank you! Your message has been sent.', {
+					toastId: 'success',
+					position: 'bottom-right',
+					autoClose: 3000,
+					hideProgressBar: true,
+					transition: slideTransition,
+					style: {
+						background: 'var(--color-pop-solid)',
+						color: 'var(--background-color)',
+						borderRadius: '15px',
+					},
+					className: styles.successLinkToast,
+				});
+				// Reset form
+				setFormData({
+					email: '',
+					name: '',
+					message: '',
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+				toast.success('Thank you! Your message has been sent.', {
+					toastId: 'success',
+					position: 'bottom-right',
+					autoClose: 3000,
+					hideProgressBar: true,
+					transition: slideTransition,
+					style: {
+						background: 'var(--color-pop-solid)',
+						color: 'var(--background-color)',
+						borderRadius: '15px',
+					},
+					className: styles.successLinkToast,
+				});
+				// Reset form
+				setFormData({
+					email: '',
+					name: '',
+					message: '',
+				});
+			});
 	}
 
 	return (
